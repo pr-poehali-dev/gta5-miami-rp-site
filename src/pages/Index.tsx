@@ -112,40 +112,55 @@ const Index = () => {
                     
                     {/* Animated Police Scene */}
                     <div className="relative h-80 bg-gradient-to-b from-miami-cyan/10 to-miami-orange/10 rounded-lg overflow-hidden">
-                      <div className="absolute inset-0 flex items-center justify-center">
-                        {/* Police Car with Lights */}
-                        <div className="relative">
-                          <div className="w-32 h-16 bg-gradient-to-r from-white to-gray-200 rounded-lg relative shadow-lg">
-                            <div className="absolute top-1 left-2 w-2 h-2 bg-red-500 rounded-full animate-police-lights"></div>
-                            <div className="absolute top-1 right-2 w-2 h-2 bg-blue-500 rounded-full animate-police-lights" style={{animationDelay: '0.5s'}}></div>
-                            <div className="absolute -top-1 left-1/2 transform -translate-x-1/2 text-xs font-bold text-black">POLICE</div>
-                          </div>
+                      <div className="absolute inset-0">
+                        {/* Police Car */}
+                        <div className="absolute left-8 bottom-8">
+                          <img 
+                            src="/img/bc7bc2eb-bec4-4bd7-92b5-4c8c588a223a.jpg" 
+                            alt="GTA 5 Police Car"
+                            className="w-48 h-32 object-cover rounded-lg shadow-lg"
+                          />
+                          <div className="absolute top-2 left-4 w-2 h-2 bg-red-500 rounded-full animate-police-lights"></div>
+                          <div className="absolute top-2 right-4 w-2 h-2 bg-blue-500 rounded-full animate-police-lights" style={{animationDelay: '0.5s'}}></div>
                         </div>
                         
                         {/* Police Officer */}
-                        <div className="absolute right-20 top-1/2 transform -translate-y-1/2">
-                          <div className="w-8 h-12 bg-blue-800 rounded-t-lg relative">
-                            <div className="w-6 h-6 bg-yellow-200 rounded-full absolute -top-3 left-1"></div>
-                            <div className="absolute -right-4 top-2 text-2xl">🔫</div>
-                          </div>
+                        <div className="absolute right-32 bottom-8">
+                          <img 
+                            src="/img/8c17fca5-2945-49cc-947e-c2191074c384.jpg" 
+                            alt="GTA 5 Police Officer"
+                            className="w-24 h-32 object-cover rounded-lg shadow-lg"
+                          />
                         </div>
                         
                         {/* Animated Bullet */}
                         {isAnimating && (
-                          <div className="absolute right-16 top-1/2 w-1 h-1 bg-miami-gold rounded-full animate-bullet-fly"></div>
+                          <div className="absolute right-28 bottom-20 w-2 h-1 bg-miami-gold rounded-full animate-bullet-fly shadow-lg">
+                            <div className="absolute inset-0 bg-miami-gold blur-sm"></div>
+                          </div>
                         )}
                         
                         {/* Criminal */}
-                        <div className="absolute right-4 top-1/2 transform -translate-y-1/2">
-                          <div className="w-8 h-12 bg-gray-800 rounded-t-lg relative">
-                            <div className="w-6 h-6 bg-yellow-200 rounded-full absolute -top-3 left-1"></div>
-                            <div className="absolute -left-2 top-2 text-sm">💼</div>
-                          </div>
+                        <div className="absolute right-8 bottom-8">
+                          <img 
+                            src="/img/eaa386ba-9969-4602-bdf4-43a0d5383225.jpg" 
+                            alt="GTA 5 Criminal"
+                            className="w-20 h-32 object-cover rounded-lg shadow-lg"
+                          />
                         </div>
+                        
+                        {/* Muzzle Flash Effect */}
+                        {isAnimating && (
+                          <div className="absolute right-24 bottom-24 w-4 h-4 bg-miami-gold rounded-full opacity-80 animate-ping"></div>
+                        )}
                       </div>
                       
-                      <div className="absolute bottom-4 left-4 text-sm text-muted-foreground">
+                      <div className="absolute bottom-4 left-4 text-sm text-muted-foreground bg-black/50 px-3 py-1 rounded-lg">
                         🚨 Полицейские патрули 24/7
+                      </div>
+                      
+                      <div className="absolute top-4 right-4 text-xs text-miami-cyan bg-black/50 px-2 py-1 rounded">
+                        LIVE ACTION
                       </div>
                     </div>
                   </div>
