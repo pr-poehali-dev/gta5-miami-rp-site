@@ -81,4 +81,88 @@
     box-shadow: 0 0 20px rgba(0, 217, 255, 0.8);
     transform: scale(1.05);
   }
+
+  /* Enhanced Animations for Police Scene */
+  @keyframes police-lights {
+    0%,
+    50% {
+      opacity: 1;
+      box-shadow: 0 0 10px currentColor;
+    }
+    51%,
+    100% {
+      opacity: 0.3;
+      box-shadow: 0 0 3px currentColor;
+    }
+  }
+
+  @keyframes bullet-fly {
+    0% {
+      transform: translateX(0) translateY(0) scale(1);
+      opacity: 1;
+    }
+    50% {
+      transform: translateX(-80px) translateY(-10px) scale(1.2);
+      opacity: 0.8;
+    }
+    100% {
+      transform: translateX(-160px) translateY(-20px) scale(0.8);
+      opacity: 0;
+    }
+  }
+
+  @keyframes bullet-trail {
+    0% {
+      width: 0px;
+      opacity: 1;
+    }
+    50% {
+      width: 32px;
+      opacity: 0.8;
+    }
+    100% {
+      width: 64px;
+      opacity: 0;
+    }
+  }
+
+  @keyframes spin-slow {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+
+  @keyframes fade-in {
+    0% {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .animate-police-lights {
+    animation: police-lights 1s infinite;
+  }
+
+  .animate-bullet-fly {
+    animation: bullet-fly 1.5s ease-out;
+  }
+
+  .animate-bullet-trail {
+    animation: bullet-trail 1.5s ease-out;
+  }
+
+  .animate-spin-slow {
+    animation: spin-slow 3s linear infinite;
+  }
+
+  .animate-fade-in {
+    animation: fade-in 0.8s ease-out;
+  }
 }
